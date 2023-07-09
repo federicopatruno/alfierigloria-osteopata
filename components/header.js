@@ -6,13 +6,13 @@ import { motion, useCycle } from 'framer-motion'
 import { fadeIn, fadeInStaggered, hamburger, menuVariants, sideMenuVariants } from '@/utils/motion'
 import Link from 'next/link';
 import { menuItems } from '@/constants';
-import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 const style = {
     span: `select-none w-[30px] h-[2px] outline-transparent outline-1 bg-gray-400 group-hover:bg-white`
 }
 
 const Header = () => {
-    const { pathname } = useRouter();
+    const pathname = usePathname();
     const [isOpen, toggleOpen] = useCycle(false, true);
     return (
         <header className="fixed w-full overflow-hidden text-gray-400 bg-gray-900 body-font z-[8]"
@@ -32,16 +32,22 @@ const Header = () => {
                         width={60}
                         height={60}
                         alt="Alfieri Gloria Osteopata"
+                        priority
                     />
-                    {""}
                 </Link>
 
                 <nav className="flex-wrap items-center justify-center hidden text-base lg:flex md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700"
 
                 >
-                    {/* <a class="mr-5 hover:text-white">First Link</a> */}
                     {menuItems.map(({ id, title, href }) =>
-                        <Link className="mr-5 hover:text-white" key={id} href={pathname === "/" ? href : `/${href}`} scroll={false}>{title}</Link>
+                        <Link
+                            key={id}
+                            className="mr-5 hover:text-white"
+                            href={pathname === "/" ? `#${href}` : `/#${href}`}
+                            scroll={false}
+                        >
+                            {title}
+                        </Link>
                     )}
                 </nav>
                 <button className="items-center hidden px-6 py-1 mt-4 text-base transition-all bg-green-400 border-0 rounded-full lg:inline-flex focus:outline-none hover:bg-green-500 md:mt-0 text-black/75 hover:text-white hover:-translate-y-1 hover:scale-110"
@@ -99,10 +105,12 @@ const Header = () => {
                         >
                             <Link
                                 className="relative inline-block mb-4 text-4xl font-normal tracking-wide text-gray-400 transition-all duration-300 ease-in-out select-none md:text-4xl hover:text-white lg:mb-6"
-                                href={pathname === "/" ? href : `/${href}`}
+                                href={pathname === "/" ? `#${href}` : `/#${href}`}
                                 scroll={false}
                                 onClick={toggleOpen}
-                            >{title}</Link>
+                            >
+                                {title}
+                            </Link>
                         </motion.li>
                     ))}
                     <motion.li

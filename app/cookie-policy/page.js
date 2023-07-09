@@ -9,7 +9,7 @@ export default function CookiePolicy() {
         <main>
             <section className="overflow-hidden text-gray-400 bg-gray-900 pt-28 body-font">
                 <div className="container px-5 mx-auto">
-                    <h1 class="sm:text-4xl text-3xl title-font text-center font-medium text-white mb-8">Politica dei Cookies</h1>
+                    <h1 className="mb-8 text-3xl font-medium text-center text-white sm:text-4xl title-font">Politica dei Cookies</h1>
 
                     <div className="">
                         <div className="flex flex-col flex-wrap py-8 md:flex-nowrap">

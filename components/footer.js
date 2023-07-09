@@ -7,9 +7,9 @@ import { fadeIn } from "@/utils/motion";
 import { currentYear, gdprMenuItems, menuItems, socialItems } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 const Footer = () => {
-    const { pathname } = useRouter()
+    const pathname = usePathname()
     return (
         <footer className="overflow-hidden text-gray-400 bg-gray-900 body-font"
 
@@ -58,13 +58,25 @@ const Footer = () => {
                         <nav className="mb-10 list-none">
                             {
                                 menuItems.map(({ id, title, href }) => (<li key={id} className="mb-1">
-                                    <Link className="text-gray-400 hover:text-white" href={pathname === "/" ? href : `/${href}`} scroll={false}>{title}</Link>
+                                    <Link
+                                        className="text-gray-400 hover:text-white"
+                                        href={pathname === "/" ? `#${href}` : `/#${href}`}
+                                        scroll={false}
+                                    >
+                                        {title}
+                                    </Link>
                                 </li>
                                 ))
                             }
                             {
                                 gdprMenuItems.map(({ id, title, href }) => (<li key={id} className="mb-1">
-                                    <Link className="text-gray-400 hover:text-white" href={href} scroll={false}>{title}</Link>
+                                    <Link
+                                        className="text-gray-400 hover:text-white"
+                                        href={href}
+                                        scroll={false}
+                                    >
+                                        {title}
+                                    </Link>
                                 </li>
                                 ))
                             }
