@@ -6,16 +6,16 @@ import { motion, useCycle } from 'framer-motion'
 import { fadeIn, fadeInStaggered, hamburger, menuVariants, sideMenuVariants } from '@/utils/motion'
 import Link from 'next/link';
 import { menuItems } from '@/constants';
-
+import { useRouter } from 'next/navigation';
 const style = {
     span: `select-none w-[30px] h-[2px] outline-transparent outline-1 bg-gray-400 group-hover:bg-white`
 }
 
 const Header = () => {
-
+    const { pathname } = useRouter();
     const [isOpen, toggleOpen] = useCycle(false, true);
     return (
-        <header className="fixed w-full overflow-hidden text-gray-400 bg-gray-900 body-font lg:relative lg:z-0 z-[8]"
+        <header className="fixed w-full overflow-hidden text-gray-400 bg-gray-900 body-font z-[8]"
 
         >
             <motion.div className="container flex flex-row items-center justify-between p-5 mx-auto lg:flex-wrap"
@@ -41,7 +41,7 @@ const Header = () => {
                 >
                     {/* <a class="mr-5 hover:text-white">First Link</a> */}
                     {menuItems.map(({ id, title, href }) =>
-                        <Link className="mr-5 hover:text-white" key={id} href={href}>{title}</Link>
+                        <Link className="mr-5 hover:text-white" key={id} href={pathname === "/" ? href : `/${href}`} scroll={false}>{title}</Link>
                     )}
                 </nav>
                 <button className="items-center hidden px-6 py-1 mt-4 text-base transition-all bg-green-400 border-0 rounded-full lg:inline-flex focus:outline-none hover:bg-green-500 md:mt-0 text-black/75 hover:text-white hover:-translate-y-1 hover:scale-110"
@@ -99,7 +99,8 @@ const Header = () => {
                         >
                             <Link
                                 className="relative inline-block mb-4 text-4xl font-normal tracking-wide text-gray-400 transition-all duration-300 ease-in-out select-none md:text-4xl hover:text-white lg:mb-6"
-                                href={href}
+                                href={pathname === "/" ? href : `/${href}`}
+                                scroll={false}
                                 onClick={toggleOpen}
                             >{title}</Link>
                         </motion.li>

@@ -4,22 +4,22 @@ export const menuItems = [
     {
         id: "about",
         title: "Chi Sono",
-        href: "/#about",
+        href: "#about",
     },
     {
         id: "treatment",
         title: "Il Trattamento",
-        href: "/#treatment",
+        href: "#treatment",
     },
     {
         id: "fees",
         title: "Tariffe",
-        href: "/#fees",
+        href: "#fees",
     },
     {
         id: "contacts",
         title: "Contatti",
-        href: "/#contacts",
+        href: "#contacts",
     },
 ]
 

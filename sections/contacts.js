@@ -6,7 +6,7 @@ import { fadeIn, slideIn } from '@/utils/motion';
 
 const Contacts = () => {
     return (
-        <section id="contacts" className="relative pt-8 text-gray-400 bg-gray-900 body-font lg:pt-0">
+        <section id="contacts" className="relative pt-10 text-gray-400 bg-gray-900 body-font">
             <div className="container px-5 pt-24 mx-auto">
                 <div className="flex flex-col w-full mb-12 text-center">
                     <motion.h1 className="mb-4 text-2xl font-medium text-white sm:text-3xl title-font"

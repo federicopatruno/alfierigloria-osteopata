@@ -8,7 +8,7 @@ import { fadeIn } from '@/utils/motion';
 
 const About = () => {
     return (
-        <section id="about" className="pt-8 text-gray-400 bg-gray-900 body-font lg:pt-0">
+        <section id="about" className="pt-10 text-gray-400 bg-gray-900 body-font">
             <div className="container flex flex-col items-center justify-center px-5 py-24 mx-auto">
                 <motion.div className="container flex flex-col items-center justify-center mx-auto"
                     variants={fadeIn("down", "tween", 0, 1)}

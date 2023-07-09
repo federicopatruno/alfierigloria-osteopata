@@ -7,8 +7,8 @@ export default function CookiePolicy() {
     const { owner, email } = gdprData
     return (
         <main>
-            <section className="overflow-hidden text-gray-400 bg-gray-900 body-font">
-                <div className="container px-5 mx-auto pt-28 lg:pt-8">
+            <section className="overflow-hidden text-gray-400 bg-gray-900 pt-28 body-font">
+                <div className="container px-5 mx-auto">
                     <h1 class="sm:text-4xl text-3xl title-font text-center font-medium text-white mb-8">Politica dei Cookies</h1>
 
                     <div className="">

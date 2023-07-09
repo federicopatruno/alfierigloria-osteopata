@@ -6,8 +6,10 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
 import { currentYear, gdprMenuItems, menuItems, socialItems } from "@/constants";
 import Image from "next/image";
-
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 const Footer = () => {
+    const { pathname } = useRouter()
     return (
         <footer className="overflow-hidden text-gray-400 bg-gray-900 body-font"
 
@@ -55,8 +57,14 @@ const Footer = () => {
                         <h2 className="mb-3 text-sm font-medium tracking-widest text-white title-font">MAPPA DEL SITO</h2>
                         <nav className="mb-10 list-none">
                             {
-                                [...menuItems, ...gdprMenuItems].map(({ id, title, href }) => (<li key={id} className="mb-1">
-                                    <a className="text-gray-400 hover:text-white" href={href}>{title}</a>
+                                menuItems.map(({ id, title, href }) => (<li key={id} className="mb-1">
+                                    <Link className="text-gray-400 hover:text-white" href={pathname === "/" ? href : `/${href}`} scroll={false}>{title}</Link>
+                                </li>
+                                ))
+                            }
+                            {
+                                gdprMenuItems.map(({ id, title, href }) => (<li key={id} className="mb-1">
+                                    <Link className="text-gray-400 hover:text-white" href={href} scroll={false}>{title}</Link>
                                 </li>
                                 ))
                             }

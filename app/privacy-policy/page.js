@@ -8,8 +8,8 @@ export default function PrivacyPolicy() {
     const { owner, email } = gdprData
     return (
         <main>
-            <section className="overflow-hidden text-gray-400 bg-gray-900 body-font">
-                <div className="container px-5 mx-auto pt-28 lg:pt-8">
+            <section className="overflow-hidden text-gray-400 bg-gray-900 body-font pt-28">
+                <div className="container px-5 mx-auto">
                     <h1 className="mb-10 text-3xl font-medium text-center text-white sm:text-4xl title-font">Informativa sulla Privacy</h1>
 
                     <div className="mb-8">
