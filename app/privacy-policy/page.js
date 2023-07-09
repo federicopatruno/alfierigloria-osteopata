@@ -10,9 +10,9 @@ export default function PrivacyPolicy() {
         <main>
             <section className="overflow-hidden text-gray-400 bg-gray-900 body-font pt-28">
                 <div className="container px-5 mx-auto">
-                    <h1 className="mb-10 text-3xl font-medium text-center text-white sm:text-4xl title-font">Informativa sulla Privacy</h1>
+                    <h1 className="text-3xl font-medium text-center text-white sm:text-4xl title-font">Informativa sulla Privacy</h1>
 
-                    <div className="mb-8">
+                    <div className="py-8">
                         <div className="flex flex-col flex-wrap md:flex-nowrap">
                             <div className="mb-4 md:flex-grow">
                                 <h2 className="mb-5 text-2xl font-medium text-white title-font">Titolare del trattamento dei dati</h2>

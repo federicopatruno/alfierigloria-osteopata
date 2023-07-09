@@ -8,8 +8,8 @@ import { fadeIn } from '@/utils/motion';
 
 const Fees = () => {
     return (
-        <section id="fees" className="pt-10 overflow-hidden text-gray-400 bg-gray-900 body-font">
-            <div className="container px-5 py-24 mx-auto">
+        <section id="fees" className="pt-20 overflow-hidden text-gray-400 bg-gray-900 body-font">
+            <div className="container px-5 pt-10 mx-auto">
                 <div className="flex flex-col w-full mb-10 text-center">
                     <motion.h1 className="mb-2 text-3xl font-medium text-white sm:text-4xl title-font"
                         variants={fadeIn("down", "tween", 0, 1)}
@@ -32,8 +32,8 @@ const Fees = () => {
                     >
                         <div className="relative flex flex-col h-full p-6 overflow-hidden border-2 border-blue-500 rounded-lg">
                             {/* <span className="absolute top-0 right-0 px-3 py-1 text-xs tracking-widest text-white bg-blue-500 rounded-bl">PRIMA</span> */}
-                            <h2 className="mb-1 text-sm font-medium tracking-widest text-gray-400 title-font">PRIMA VISITA OSTEOPATICA</h2>
-                            <h1 className="flex items-center pb-4 mb-4 text-5xl leading-none text-white border-b border-gray-800">
+                            <h2 className="mb-2 text-sm font-medium tracking-widest text-gray-400 title-font">PRIMA VISITA OSTEOPATICA</h2>
+                            <h1 className="flex items-center pb-4 mb-6 text-5xl leading-none text-center text-white border-b border-gray-800">
                                 <span>&euro;70</span>
                                 <span className="ml-1 text-lg font-normal text-gray-400"></span>
                             </h1>
@@ -64,8 +64,8 @@ const Fees = () => {
                         viewport={{ once: false, amount: 0.25 }}
                     >
                         <div className="relative flex flex-col h-full p-6 overflow-hidden border-2 border-gray-700 rounded-lg">
-                            <h2 className="mb-1 text-sm font-medium tracking-widest text-gray-400 title-font">VISITA OSTEOPATICA DI CONTROLLO</h2>
-                            <h1 className="flex items-center pb-4 mb-4 text-5xl leading-none text-white border-b border-gray-800">
+                            <h2 className="mb-2 text-sm font-medium tracking-widest text-gray-400 title-font">VISITA OSTEOPATICA DI CONTROLLO</h2>
+                            <h1 className="flex items-center pb-4 mb-6 text-5xl leading-none text-white border-b border-gray-800">
                                 <span>&euro;60</span>
                                 <span className="ml-1 text-lg font-normal text-gray-400"></span>
                             </h1>

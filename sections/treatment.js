@@ -9,8 +9,8 @@ import { motion } from 'framer-motion';
 import { fadeIn, zoomOut } from '@/utils/motion';
 const Treatment = () => {
     return (
-        <section id="treatment" className="pt-10 text-gray-400 bg-gray-900 body-font">
-            <div className="container px-5 py-24 mx-auto">
+        <section id="treatment" className="pt-20 text-gray-400 bg-gray-900 body-font">
+            <div className="container px-5 pt-10 mx-auto">
 
 
 

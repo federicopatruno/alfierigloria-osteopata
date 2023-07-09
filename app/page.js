@@ -7,8 +7,8 @@ export default function Home() {
       <About />
       <Treatment />
       <Fees />
-      <Contacts />
       <Gallery />
+      <Contacts />
     </main>
   )
 }

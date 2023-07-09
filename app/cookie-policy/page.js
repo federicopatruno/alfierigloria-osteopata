@@ -9,10 +9,10 @@ export default function CookiePolicy() {
         <main>
             <section className="overflow-hidden text-gray-400 bg-gray-900 pt-28 body-font">
                 <div className="container px-5 mx-auto">
-                    <h1 className="mb-8 text-3xl font-medium text-center text-white sm:text-4xl title-font">Politica dei Cookies</h1>
+                    <h1 className="text-3xl font-medium text-center text-white sm:text-4xl title-font">Politica dei Cookies</h1>
 
-                    <div className="">
-                        <div className="flex flex-col flex-wrap py-8 md:flex-nowrap">
+                    <div className="py-8">
+                        <div className="flex flex-col flex-wrap md:flex-nowrap">
                             <div className="mb-4 md:flex-grow">
                                 <h2 className="mb-5 text-2xl font-medium text-white title-font">Cosa sono i cookie</h2>
                                 <p className="mb-4 leading-relaxed">I Cookie sono costituiti da porzioni di codice installate all’interno del browser che assistono il Titolare nell’erogazione del Servizio in base alle finalità descritte. Alcune delle finalità di installazione dei Cookie potrebbero, inoltre, necessitare del consenso dell’Utente.</p>
