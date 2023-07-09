@@ -58,13 +58,20 @@ const Footer = () => {
                         <nav className="mb-10 list-none">
                             {
                                 menuItems.map(({ id, title, href }) => (<li key={id} className="mb-1">
-                                    <Link
+                                    {/* <Link
                                         className="text-gray-400 hover:text-white"
                                         href={pathname === "/" ? `${pathname}#${href}` : `/#${href}`}
                                         scroll={false}
                                     >
                                         {title}
-                                    </Link>
+                                    </Link> */}
+                                    <a
+                                        className="text-gray-400 hover:text-white"
+                                        href={pathname === "/" ? `#${href}` : `/#${href}`}
+                                        scroll={false}
+                                    >
+                                        {title}
+                                    </a>
                                 </li>
                                 ))
                             }

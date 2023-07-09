@@ -40,15 +40,24 @@ const Header = () => {
 
                 >
                     {menuItems.map(({ id, title, href }) =>
-                        <Link
+                        // <Link
+                        //     key={id}
+                        //     className="mr-5 hover:text-white"
+                        //     href={pathname === "/" ? `${pathname}#${href}` : `/#${href}`}
+                        //     scroll={false}
+
+                        // >
+                        //     {title}
+                        // </Link>
+
+                        <a
                             key={id}
                             className="mr-5 hover:text-white"
-                            href={pathname === "/" ? `${pathname}#${href}` : `/#${href}`}
+                            href={pathname === "/" ? `#${href}` : `/#${href}`}
                             scroll={false}
-
                         >
                             {title}
-                        </Link>
+                        </a>
                     )}
                 </nav>
                 <button className="items-center hidden px-6 py-1 mt-4 text-base transition-all bg-green-400 border-0 rounded-full lg:inline-flex focus:outline-none hover:bg-green-500 md:mt-0 text-black/75 hover:text-white hover:-translate-y-1 hover:scale-110"
@@ -104,14 +113,22 @@ const Header = () => {
                             variants={fadeInStaggered("up", "tween", 2)}
                             className={`my-[20px] mx-0 text-center`}
                         >
-                            <Link
+                            {/* <Link
                                 className="relative inline-block mb-4 text-4xl font-normal tracking-wide text-gray-400 transition-all duration-300 ease-in-out select-none md:text-4xl hover:text-white lg:mb-6"
                                 href={pathname === "/" ? `${pathname}#${href}` : `/#${href}`}
                                 scroll={false}
                                 onClick={toggleOpen}
                             >
                                 {title}
-                            </Link>
+                            </Link> */}
+                            <a
+                                className="relative inline-block mb-4 text-4xl font-normal tracking-wide text-gray-400 transition-all duration-300 ease-in-out select-none md:text-4xl hover:text-white lg:mb-6"
+                                href={pathname === "/" ? `#${href}` : `/#${href}`}
+                                scroll={false}
+                                onClick={toggleOpen}
+                            >
+                                {title}
+                            </a>
                         </motion.li>
                     ))}
                     <motion.li
