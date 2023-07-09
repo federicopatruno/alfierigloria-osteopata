@@ -8,7 +8,7 @@ import { fadeIn } from '@/utils/motion';
 
 const Fees = () => {
     return (
-        <section id="fees" className="pt-10 overflow-hidden text-gray-400 bg-gray-900 body-font lg:min-h-[75vw]">
+        <section id="fees" className="pt-10 overflow-hidden text-gray-400 bg-gray-900 body-font">
             <div className="container px-5 py-24 mx-auto">
                 <div className="flex flex-col w-full mb-10 text-center">
                     <motion.h1 className="mb-2 text-3xl font-medium text-white sm:text-4xl title-font"
