@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { GiBackPain } from 'react-icons/gi'
 
@@ -13,7 +14,7 @@ const FourOhFour = () => {
                     <h1 className="mb-4 text-3xl font-medium text-white title-font sm:text-4xl">Ouch! Pagina Non Trovata</h1>
                     <p className="mb-8 leading-relaxed">La pagina che cerchi non è stata trovata, ma non preoccuparti, l&apos;importante è trovare il mio studio per risolvere tutti i tuoi problemi!</p>
                     <div className="flex justify-center">
-                        <button className="inline-flex px-6 py-2 text-lg text-white bg-blue-500 border-0 rounded focus:outline-none hover:bg-blue-600">Torna Alla Home</button>
+                        <button className="inline-flex px-6 py-2 text-lg text-white bg-blue-500 border-0 rounded focus:outline-none hover:bg-blue-600"><Link href="/">Torna Alla Home</Link></button>
                     </div>
                 </div>
             </div>
