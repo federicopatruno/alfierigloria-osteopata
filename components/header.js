@@ -54,7 +54,6 @@ const Header = () => {
                             key={id}
                             className="mr-5 hover:text-white"
                             href={pathname === "/" ? `#${href}` : `/#${href}`}
-                            scroll={false}
                         >
                             {title}
                         </a>
@@ -124,7 +123,6 @@ const Header = () => {
                             <a
                                 className="relative inline-block mb-4 text-4xl font-normal tracking-wide text-gray-400 transition-all duration-300 ease-in-out select-none md:text-4xl hover:text-white lg:mb-6"
                                 href={pathname === "/" ? `#${href}` : `/#${href}`}
-                                scroll={false}
                                 onClick={toggleOpen}
                             >
                                 {title}

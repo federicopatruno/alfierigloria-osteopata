@@ -68,7 +68,6 @@ const Footer = () => {
                                     <a
                                         className="text-gray-400 hover:text-white"
                                         href={pathname === "/" ? `#${href}` : `/#${href}`}
-                                        scroll={false}
                                     >
                                         {title}
                                     </a>
