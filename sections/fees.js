@@ -32,7 +32,7 @@ const Fees = () => {
                     >
                         <div className="relative flex flex-col h-full p-6 overflow-hidden border-2 border-blue-500 rounded-lg">
                             {/* <span className="absolute top-0 right-0 px-3 py-1 text-xs tracking-widest text-white bg-blue-500 rounded-bl">PRIMA</span> */}
-                            <h2 className="mb-2 text-sm font-medium tracking-widest text-gray-400 title-font">PRIMA VISITA OSTEOPATICA</h2>
+                            <h2 className="mb-2 text-sm font-medium tracking-widest text-gray-400 uppercase title-font">Valutazione Osteopatica</h2>
                             <h1 className="flex items-center pb-4 mb-6 text-5xl leading-none text-center text-white border-b border-gray-800">
                                 <span>&euro;70</span>
                                 <span className="ml-1 text-lg font-normal text-gray-400"></span>
@@ -64,7 +64,7 @@ const Fees = () => {
                         viewport={{ once: false, amount: 0.25 }}
                     >
                         <div className="relative flex flex-col h-full p-6 overflow-hidden border-2 border-gray-700 rounded-lg">
-                            <h2 className="mb-2 text-sm font-medium tracking-widest text-gray-400 title-font">VISITA OSTEOPATICA DI CONTROLLO</h2>
+                            <h2 className="mb-2 text-sm font-medium tracking-widest text-gray-400 uppercase title-font">Trattamento di Osteopatia</h2>
                             <h1 className="flex items-center pb-4 mb-6 text-5xl leading-none text-white border-b border-gray-800">
                                 <span>&euro;60</span>
                                 <span className="ml-1 text-lg font-normal text-gray-400"></span>
