@@ -19,7 +19,13 @@ const Contacts = () => {
           <h3 className="subtitle">Si Riceve Solo Su Appuntamento</h3>
         </MotionDiv>
 
-        <div className="relative flex items-end justify-start p-10 overflow-hidden bg-gray-900 rounded-lg w-full min-h-[600px]">
+        <MotionDiv
+          className="relative flex items-end justify-start p-10 overflow-hidden bg-gray-900 rounded-lg w-full min-h-[600px]"
+          variants={fadeIn("up", "tween", 0.25, 1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+        >
           <iframe
             width="100%"
             height="100%"
@@ -56,7 +62,7 @@ const Contacts = () => {
               </a>
             </div>
           </MotionDiv>
-        </div>
+        </MotionDiv>
       </div>
     </section>
   );

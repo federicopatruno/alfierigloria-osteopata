@@ -8,7 +8,7 @@ const About = () => {
     <section id="about" className="py-24">
       <div className="flex flex-col items-center justify-center mx-auto sm:container max-sm:w-11/12">
         <MotionDiv
-          className="relative w-4/6 mx-auto mb-10 overflow-hidden bg-red-500 rounded-full aspect-square lg:w-1/4 md:w-3/6"
+          className="relative w-4/6 mx-auto mb-10 overflow-hidden bg-blue-500 rounded-full aspect-square lg:w-1/4 md:w-3/6"
           variants={fadeIn("", "tween", 0, 1)}
           initial="hidden"
           whileInView="show"
@@ -19,6 +19,7 @@ const About = () => {
             alt="Dr.ssa Alfieri Gloria Osteopata"
             src="/images/alfieri-gloria-osteopata.jpeg"
             fill
+            placeholder="empty"
             sizes="(max-width: 768px) 50vw, 33vw"
             loading="lazy"
           />
