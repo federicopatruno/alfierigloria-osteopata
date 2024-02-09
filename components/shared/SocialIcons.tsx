@@ -6,10 +6,10 @@ import {
 } from "react-icons/fa6";
 
 interface SocialIconsProps {
-  facebook: string | undefined;
-  twitterX: string | undefined;
-  instagram: string | undefined;
-  linkedin: string | undefined;
+  facebook?: string;
+  twitterX?: string;
+  instagram?: string;
+  linkedin?: string;
 }
 
 const SocialIcons = ({
