@@ -8,36 +8,44 @@ import {
   sideMenuVariants,
 } from "@/utils/motion";
 import { menuItems } from "@/constants";
-import { clsx } from "clsx/lite";
+import { cn } from "@/lib/utils";
+import { useEffect } from "react";
 
 const MobileMenu = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
+  useEffect(() => {
+    if (window) {
+      if (isOpen) {
+        window.document.body.classList.add("overflow-y-hidden");
+      } else {
+        window.document.body.classList.remove("overflow-y-hidden");
+      }
+    }
+  }, [isOpen]);
+
   return (
     <>
       {/* Hamburger Button */}
-      <div
+      <button
         className="z-[999] cursor-pointer flex lg:hidden items-center justify-center flex-col self-center gap-[6px] group"
-        onClick={(e: React.MouseEvent<HTMLDivElement>) => toggleOpen()}
+        onClick={(e: React.MouseEvent<HTMLButtonElement>) => toggleOpen()}
       >
         <span
-          className={clsx(
-            "hamburger-span",
-            isOpen && "rotate-45 translate-y-2"
-          )}
+          className={cn("hamburger-span", isOpen && "rotate-45 translate-y-2")}
         />
         <span
-          className={clsx(
+          className={cn(
             "hamburger-span transition-opacity duration-300 ease-out",
             isOpen ? "opacity-0" : "opacity-100"
           )}
         />
         <span
-          className={clsx(
+          className={cn(
             "hamburger-span",
             isOpen && "-rotate-45 -translate-y-2"
           )}
         />
-      </div>
+      </button>
 
       {/* Side Menu */}
       <motion.nav
@@ -45,7 +53,7 @@ const MobileMenu = () => {
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         exit="closed"
-        className="bg-blue-900 fixed w-full h-screen top-0 bottom-0 flex items-center justify-center transition-all duration-[600] ease-linear z-[99] flex-col"
+        className="lg:hidden bg-blue-900 fixed w-full h-screen top-0 bottom-0 flex items-center justify-center transition-all duration-700 ease-linear z-[99] flex-col"
       >
         <motion.ul
           variants={sideMenuVariants}

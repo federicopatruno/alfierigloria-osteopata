@@ -5,7 +5,7 @@ import CTAButton from "../shared/ui/CTAButton";
 
 const About = () => {
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-24 bg-gray-900">
       <div className="flex flex-col items-center justify-center mx-auto sm:container max-sm:w-11/12">
         <MotionDiv
           className="relative w-4/6 mx-auto mb-10 overflow-hidden bg-blue-500 rounded-full aspect-square lg:w-1/4 md:w-3/6"
@@ -42,7 +42,7 @@ const About = () => {
         </MotionDiv>
 
         <MotionDiv
-          className="max-w-4xl prose-lg text-gray-300"
+          className="max-w-4xl prose-lg text-justify text-gray-400"
           variants={fadeIn("right", "tween", 0.5, 1)}
           initial="hidden"
           whileInView="show"

@@ -1,5 +1,5 @@
 import "./globals.css";
-import "vanilla-cookieconsent/dist/cookieconsent.css";
+
 import { Poppins } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Header from "@/components/Header";

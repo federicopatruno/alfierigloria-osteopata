@@ -134,7 +134,7 @@ export const config: CookieConsent.CookieConsentConfig = {
               description: `Questi cookie raccolgono informazioni su come utilizzi il nostro sito web. Tutti i dati sono resi anonimi e non possono essere utilizzati per identificarti.`,
               linkedCategory: "analytics",
               cookieTable: {
-                caption: "Cookie table",
+                caption: "Tabella dei Cookies",
                 headers: {
                   name: "Cookie",
                   domain: "Dominio",

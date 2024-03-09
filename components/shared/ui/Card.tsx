@@ -1,6 +1,6 @@
+import { cn } from "@/lib/utils";
 import { MotionDiv } from "../MotionDiv";
 import { fadeIn } from "@/utils/motion";
-import { clsx } from "clsx/lite";
 
 interface CardProps {
   icon: React.ReactNode;
@@ -12,7 +12,7 @@ interface CardProps {
 const Card = ({ icon, title, content, inverted = false }: CardProps) => {
   return (
     <div
-      className={clsx(
+      className={cn(
         "flex flex-col items-center w-full gap-10 py-8 mx-auto",
         inverted ? "sm:flex-row-reverse" : "sm:flex-row"
       )}
@@ -28,7 +28,7 @@ const Card = ({ icon, title, content, inverted = false }: CardProps) => {
       </MotionDiv>
 
       <MotionDiv
-        className={clsx(
+        className={cn(
           "flex flex-col text-center gap-y-2",
           inverted ? "sm:text-end" : "sm:text-start"
         )}

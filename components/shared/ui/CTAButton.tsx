@@ -1,21 +1,21 @@
-import { clsx } from "clsx/lite";
+import { cn } from "@/lib/utils";
 
 interface CTAButtonProps {
-  variant?: "small";
+  variant?: "small" | "default";
 }
 
-const CTAButton = ({ variant }: CTAButtonProps) => {
+const CTAButton = ({ variant = "default" }: CTAButtonProps) => {
   return (
     <a
-      className={clsx(
-        "book-appointment flex items-center py-2 transition-all bg-green-400 border-0 rounded-full text-black/75 focus:outline-none hover:bg-blue-700 hover:text-white hover:-translate-y-1 hover:scale-110 duration-500",
+      className={cn(
+        "book-appointment flex gap-x items-center py-2 transition-all bg-green-400 border-0 rounded-full text-black/75 focus:outline-none hover:bg-blue-700 hover:text-white hover:-translate-y-1 hover:scale-110 duration-500",
         variant === "small" ? "px-4 max-lg:hidden" : "px-6 text-lg"
       )}
       href="tel:+393345832026"
       rel="noreferrer"
       target="_blank"
     >
-      Richiedi Appuntamento
+      <span>Richiedi Appuntamento</span>
       <svg
         fill="none"
         stroke="currentColor"
