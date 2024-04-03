@@ -57,7 +57,7 @@ const Header = () => {
                 <ul className="flex flex-wrap items-center justify-center gap-x-4">
                   {menuItems.map(({ id, title, href }) => (
                     <li key={id}>
-                      <Link
+                      <a
                         className={cn(
                           isVisible || isHome
                             ? "hover:text-white"
@@ -66,7 +66,7 @@ const Header = () => {
                         href={isHome ? `#${href}` : `/#${href}`}
                       >
                         {title}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>

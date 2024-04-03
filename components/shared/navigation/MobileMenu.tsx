@@ -1,6 +1,5 @@
 "use client";
 import { motion, useCycle } from "framer-motion";
-import Link from "next/link";
 import CTAButton from "../ui/CTAButton";
 import {
   fadeInStaggered,
@@ -69,7 +68,7 @@ const MobileMenu = () => {
               variants={fadeInStaggered("up", "tween", 2)}
               className="text-center"
             >
-              <Link
+              <a
                 className="inline-block mb-4 text-4xl font-normal tracking-wide text-gray-400 transition-all duration-300 ease-in-out select-none md:text-4xl hover:text-white lg:mb-6"
                 href={isHome ? `#${href}` : `/#${href}`}
                 onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
@@ -77,7 +76,7 @@ const MobileMenu = () => {
                 }
               >
                 {title}
-              </Link>
+              </a>
             </motion.li>
           ))}
           <motion.li variants={fadeInStaggered("up", "tween", 2)}>

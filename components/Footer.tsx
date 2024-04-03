@@ -1,7 +1,6 @@
 "use client";
 import { menuItems } from "@/constants";
 import Image from "next/image";
-import Link from "next/link";
 import SocialIcons from "./shared/SocialIcons";
 import { usePathname } from "next/navigation";
 
@@ -83,9 +82,7 @@ const Footer = () => {
               <ul className="flex flex-col gap-y-1 text-gray-400 [&>li:hover]:text-gray-200">
                 {menuItems.map(({ id, title, href }) => (
                   <li key={id}>
-                    <Link href={isHome ? `#${href}` : `/#${href}`}>
-                      {title}
-                    </Link>
+                    <a href={isHome ? `#${href}` : `/#${href}`}>{title}</a>
                   </li>
                 ))}
 
