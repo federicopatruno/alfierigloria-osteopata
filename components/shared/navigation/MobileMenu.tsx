@@ -10,9 +10,13 @@ import {
 import { menuItems } from "@/constants";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const MobileMenu = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
   useEffect(() => {
     if (window) {
       if (isOpen) {
@@ -67,7 +71,7 @@ const MobileMenu = () => {
             >
               <Link
                 className="inline-block mb-4 text-4xl font-normal tracking-wide text-gray-400 transition-all duration-300 ease-in-out select-none md:text-4xl hover:text-white lg:mb-6"
-                href={`/#${href}`}
+                href={isHome ? `#${href}` : `/#${href}`}
                 onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
                   toggleOpen()
                 }

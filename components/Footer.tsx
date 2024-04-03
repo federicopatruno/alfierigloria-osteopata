@@ -1,10 +1,14 @@
+"use client";
 import { menuItems } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import SocialIcons from "./shared/SocialIcons";
-const currentYear = new Date().getFullYear();
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   return (
     <footer className="overflow-hidden text-gray-400 bg-gray-900 body-font">
       <div className="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start lg:flex-row md:flex-nowrap">
@@ -79,7 +83,9 @@ const Footer = () => {
               <ul className="flex flex-col gap-y-1 text-gray-400 [&>li:hover]:text-gray-200">
                 {menuItems.map(({ id, title, href }) => (
                   <li key={id}>
-                    <Link href={`/#${href}`}>{title}</Link>
+                    <Link href={isHome ? `#${href}` : `/#${href}`}>
+                      {title}
+                    </Link>
                   </li>
                 ))}
 

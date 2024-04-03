@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { menuItems } from "@/constants";
 import CTAButton from "./shared/ui/CTAButton";
@@ -64,7 +63,7 @@ const Header = () => {
                             ? "hover:text-white"
                             : "hover:text-sky-500"
                         )}
-                        href={`/#${href}`}
+                        href={isHome ? `#${href}` : `/#${href}`}
                       >
                         {title}
                       </Link>
