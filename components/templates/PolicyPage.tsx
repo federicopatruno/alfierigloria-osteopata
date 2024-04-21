@@ -15,7 +15,7 @@ export default function PolicyPage({ children, title }: Props) {
             alt="cover"
             fill
             className="object-cover grayscale brightness-50"
-            sizes="100vw"
+            sizes="(max-width: 768px) 33vw, (max-width: 1600px) 50vw, 100vw"
           />
         </div>
       </section>

@@ -10,7 +10,7 @@ const Biography = () => {
             alt="Dr.ssa Alfieri Gloria Osteopata"
             src="/images/treatment-05.jpg"
             fill
-            sizes="100vw"
+            sizes="(max-width: 768px) 33vw, (max-width: 1600px) 50vw, 100vw"
           />
         </div>
         <div className="bg-blue-950 lg:w-1/2 py-12 lg:py-24 px-8 lg:px-16 lg:justify-center lg:flex lg:flex-col">

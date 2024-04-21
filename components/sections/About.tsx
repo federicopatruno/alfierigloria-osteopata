@@ -12,7 +12,7 @@ const About = () => {
             alt="Dr.ssa Alfieri Gloria Osteopata"
             src="/images/alfieri-gloria-osteopata.jpg"
             fill
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1600px) 50vw, 33vw"
           />
         </div>
         <div className="bg-blue-950 flex flex-col lg:w-1/2 lg:py-24 lg:px-16 py-12 px-8 lg:justify-center lg:flex lg:flex-col">
