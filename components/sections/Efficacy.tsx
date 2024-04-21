@@ -44,6 +44,7 @@ const Efficacy = () => {
             alt="Dr.ssa Alfieri Gloria Osteopata"
             src="/images/treatment-04.jpg"
             fill
+            loading="lazy"
             sizes="(max-width: 768px) 33vw, (max-width: 1600px) 50vw, 100vw"
           />
         </div>

@@ -12,6 +12,7 @@ const About = () => {
             alt="Dr.ssa Alfieri Gloria Osteopata"
             src="/images/alfieri-gloria-osteopata.jpg"
             fill
+            priority
             sizes="(max-width: 768px) 100vw, (max-width: 1600px) 50vw, 33vw"
           />
         </div>

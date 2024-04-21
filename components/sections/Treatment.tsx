@@ -28,19 +28,3 @@ const Treatment = () => {
 };
 
 export default Treatment;
-
-const Rest = () => {
-  return (
-    <>
-      <MotionDiv
-        className="flex justify-center mx-auto mt-16"
-        variants={fadeIn("up", "tween", 0, 1)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
-      >
-        <CTAButton />
-      </MotionDiv>
-    </>
-  );
-};

@@ -39,6 +39,7 @@ const Osteopathy = () => {
             alt="Dr.ssa Alfieri Gloria Osteopata"
             src="/images/treatment-02.jpg"
             fill
+            loading="lazy"
             sizes="(max-width: 768px) 33vw, (max-width: 1600px) 50vw, 100vw"
           />
         </div>

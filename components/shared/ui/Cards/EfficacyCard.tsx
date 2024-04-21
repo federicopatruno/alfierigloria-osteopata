@@ -11,8 +11,14 @@ interface Props {
 const EfficacyCard = ({ iconURL, title, content, classNames = "" }: Props) => {
   return (
     <div className="flex lg:justify-start lg:gap-4 max-lg:flex-col justify-center max-lg:items-center gap-2">
-      <div className={cn("relative h-12 w-12", classNames)}>
-        <Image fill className="object-contain" src={iconURL} alt={title} />
+      <div>
+        <Image
+          height={48}
+          width={48}
+          className="object-contain"
+          src={iconURL}
+          alt={title}
+        />
       </div>
 
       <div>

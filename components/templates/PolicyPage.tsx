@@ -14,6 +14,7 @@ export default function PolicyPage({ children, title }: Props) {
             src="/images/treatment-03.jpg"
             alt="cover"
             fill
+            priority
             className="object-cover grayscale brightness-50"
             sizes="(max-width: 768px) 33vw, (max-width: 1600px) 50vw, 100vw"
           />

@@ -11,8 +11,14 @@ const TreatmentCard = ({ iconURL, title, content }: Props) => {
     <div className="drop-shadow-xl bg-white rounded-3xl overflow-hidden">
       <div className="bg-blue-100/5 min-h-96">
         <div className="h-48 bg-blue-950 flex justify-center items-center">
-          <div className="relative h-32 w-32">
-            <Image fill src={iconURL} alt={title} className="object-contain" />
+          <div>
+            <Image
+              width={128}
+              height={128}
+              src={iconURL}
+              alt={title}
+              className="object-contain"
+            />
           </div>
         </div>
 
