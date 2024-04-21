@@ -4,7 +4,6 @@ import Contacts from "@/components/sections/Contacts";
 import Efficacy from "@/components/sections/Efficacy";
 import FAQ from "@/components/sections/FAQ";
 import Fees from "@/components/sections/Fees";
-import Gallery from "@/components/sections/Gallery";
 import Osteopathy from "@/components/sections/Osteopathy";
 import Treatment from "@/components/sections/Treatment";
 
