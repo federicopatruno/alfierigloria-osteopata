@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { useRef, useState } from "react";
 import { useInView, useMotionValueEvent, useScroll } from "framer-motion";
 import { usePathname } from "next/navigation";
+import ScrollLink from "./shared/ui/ScrollLInk";
 
 const Header = () => {
   const ref = useRef(null);
@@ -16,7 +17,6 @@ const Header = () => {
   const { scrollYProgress } = useScroll();
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const pathname = usePathname();
-  const isHome = pathname === "/";
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     const show = !isInView && (scrollYProgress.getPrevious() || 0) > latest;
@@ -28,55 +28,66 @@ const Header = () => {
       <div ref={headerRef}>
         <header
           className={cn(
-            isHiddenInView &&
-              "animate-in fill-mode-both fade-in-0 slide-in-from-top-4 duration-1000 delay-300",
             "fixed flex w-full select-none z-50 transition-all duration-700 ease-out font-medium",
-            isVisible
-              ? "border-b-sky-300 shadow-sm shadow-black/20  text-gray-300 bg-gray-900 border-b-4 opacity-100"
-              : "shadow-none shadow-black/0 border-b-0 text-sky-800 bg-gray-0",
-            isHome && "text-gray-300",
-            !isHiddenInView && !isVisible && "-top-24",
-            !isHiddenInView && isVisible && "top-0"
+            isHiddenInView
+              ? "will-change-transform animate-in fill-mode-both fade-in-0 slide-in-from-top-24 opacity-100"
+              : "",
+            !isHiddenInView &&
+              (isVisible ? "top-0 bg-blue-900" : "-top-24 bg-blue-900/0")
           )}
         >
           <div className="flex items-center justify-between mx-auto sm:container max-sm:w-11/12 py-4">
-            <div className="flex items-center flex-1 gap-x-4">
+            <div className="flex items-center gap-x-4">
               <Link
                 href="/"
                 className={cn(
-                  isVisible || isHome
-                    ? "hover:text-white"
-                    : "hover:text-sky-500"
+                  "flex items-center",
+                  isHiddenInView && pathname === "/"
+                    ? "text-blue-950 hover:text-blue-800"
+                    : "text-gray-300 hover:text-white"
                 )}
               >
                 <div className="h-12 w-12">
                   <HeaderLogo />
                 </div>
+                <span
+                  className={cn(
+                    "ml-2 text-lg lg:text-xl text-start leading-none lg:leading-none",
+                    !isHiddenInView && "lg:hidden"
+                  )}
+                >
+                  Alfieri Gloria
+                  <br /> Osteopata
+                </span>
               </Link>
+            </div>
+            <div className={cn(!isHiddenInView && "ml-8 flex-1")}>
               <nav className="hidden text-base lg:flex">
                 <ul className="flex flex-wrap items-center justify-center gap-x-4">
-                  {menuItems.map(({ id, title, href }) => (
-                    <li key={id}>
-                      <a
-                        className={cn(
-                          isVisible || isHome
-                            ? "hover:text-white"
-                            : "hover:text-sky-500"
-                        )}
-                        href={isHome ? `#${href}` : `/#${href}`}
-                      >
-                        {title}
-                      </a>
+                  {menuItems.map(({ id, title }, index) => (
+                    <li key={index} className="text-gray-300 hover:text-white">
+                      {pathname === "/" ? (
+                        <ScrollLink href={`#${id}`}>{title}</ScrollLink>
+                      ) : (
+                        <Link href={`/#${id}`}>{title}</Link>
+                      )}
                     </li>
                   ))}
                 </ul>
               </nav>
             </div>
 
-            <CTAButton variant="small" />
+            <div
+              className={cn(
+                "transition-all duration-500 delay-300",
+                isHiddenInView && "hidden"
+              )}
+            >
+              <CTAButton variant="small" />
+            </div>
 
             {/* Mobile Menu */}
-            <MobileMenu />
+            <MobileMenu isHiddenInView={isHiddenInView} />
           </div>
         </header>
       </div>

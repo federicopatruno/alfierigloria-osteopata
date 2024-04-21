@@ -41,19 +41,19 @@ export const sideMenuVariants = {
 export const menuVariants = {
   closed: {
     right: "-100%",
-    transition: {
-      staggerChildren: 0.2,
-      staggerDirection: -1,
-      when: "afterChildren",
-    },
+    // transition: {
+    //   staggerChildren: 0.2,
+    //   staggerDirection: -1,
+    //   when: "afterChildren",
+    // },
   },
   open: {
     right: "0%",
-    transition: {
-      staggerChildren: 0.2,
-      staggerDirection: 1,
-      when: "beforeChildren",
-    },
+    // transition: {
+    //   staggerChildren: 0.2,
+    //   staggerDirection: 1,
+    //   when: "beforeChildren",
+    // },
   },
 };
 

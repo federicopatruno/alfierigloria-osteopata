@@ -1,48 +1,47 @@
 export const menuItems = [
   {
     id: "about",
-    title: "Chi Sono",
-    href: "about",
+    title: "Home",
+  },
+  {
+    id: "osteopathy",
+    title: "L'Osteopatia",
   },
   {
     id: "treatment",
     title: "Il Trattamento",
-    href: "treatment",
   },
   {
     id: "fees",
     title: "Tariffe",
-    href: "fees",
+  },
+  {
+    id: "biography",
+    title: "Biografia",
   },
   {
     id: "contacts",
     title: "Contatti",
-    href: "contacts",
   },
 ];
 
-export const gdprMenuItems = [
+export const treatmentStages = [
   {
-    id: "privacy-policy",
-    title: "Informativa sulla privacy",
-    href: "/privacy-policy",
+    title: "Anamnesi",
+    iconURL: "/images/icons/medical-report.png",
+    content:
+      "La raccolta di dati relativi alla storia di salute del paziente, queste domande vengono poste per avere un quadro generale dello stato clinico e per escludere controindicazioni al trattamento.",
   },
   {
-    id: "cookie-policy",
-    title: "Politica dei cookies",
-    href: "/cookie-policy",
-  },
-];
-
-export const fees = [
-  {
-    title: "Prima Visita Osteopatica",
-    fee: 70,
-    services: ["Anamnesi", "Valutazione", "Trattamento"],
+    title: "Esame Visivo",
+    iconURL: "/images/icons/spinal-cord.png",
+    content:
+      "Il paziente viene esaminato attraverso la valutazione della postura, delle curve della colonna vertebrale e delle eventuali asimmetrie",
   },
   {
-    title: "Visita Osteopatica",
-    fee: 60,
-    services: ["Trattamento"],
+    title: "Palpazione e trattamento",
+    iconURL: "/images/icons/treatment.png",
+    content:
+      "Vengono individuate delle strutture disfunzionali e l'applicazione delle tecniche manipolative in funzione delle necessità terapeutiche riscontrate.",
   },
 ];

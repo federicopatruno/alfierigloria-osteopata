@@ -1,21 +1,25 @@
 import { cn } from "@/lib/utils";
 
-interface CTAButtonProps {
+interface Props {
   variant?: "small" | "default";
+  title?: string;
 }
 
-const CTAButton = ({ variant = "default" }: CTAButtonProps) => {
+const CTAButton = ({
+  variant = "default",
+  title = "Richiedi Appuntamento",
+}: Props) => {
   return (
     <a
       className={cn(
-        "book-appointment flex gap-x items-center py-2 transition-all bg-green-400 border-0 rounded-full text-black/75 focus:outline-none hover:bg-blue-700 hover:text-white hover:-translate-y-1 hover:scale-110 duration-500",
+        "book-appointment flex gap-x items-center py-2 transition-all bg-blue-300 border-0 rounded-full text-black/75 focus:outline-none hover:bg-blue-700 hover:text-white lg:hover:-translate-y-1 lg:hover:scale-110 duration-500",
         variant === "small" ? "px-4 max-lg:hidden" : "px-6 text-lg"
       )}
       href="tel:+393345832026"
       rel="noreferrer"
       target="_blank"
     >
-      <span>Richiedi Appuntamento</span>
+      <span>{title}</span>
       <svg
         fill="none"
         stroke="currentColor"

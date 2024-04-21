@@ -1,101 +1,68 @@
-import { fees } from "@/constants";
-import { fadeIn } from "@/utils/motion";
-import { MotionDiv } from "../shared/MotionDiv";
-import Divider from "../shared/ui/Divider";
+import CTAButton from "../shared/ui/CTAButton";
 
 const Fees = () => {
   return (
-    <section
-      id="fees"
-      className="py-24 overflow-hidden text-gray-400 bg-gray-900 body-font"
-    >
-      <div className="container mx-auto max-sm:w-11/12">
-        <MotionDiv
-          className="flex flex-col w-full mx-auto mb-8 text-center lg:w-2/3 gap-y-2"
-          variants={fadeIn("up", "tween", 0, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
-        >
-          <h1 className="title">Tariffe</h1>
-        </MotionDiv>
-        <div className="flex flex-col items-center justify-center gap-y-8">
-          <div className="flex flex-wrap justify-center md:w-3/4 lg:w-2/3">
-            {fees.map(({ title, services, fee }, index) => (
-              <MotionDiv
-                className="w-3/4 p-4 sm:w-1/2 min-h-80"
-                key={index}
-                variants={fadeIn(
-                  index % 2 === 0 ? "right" : "left",
-                  "tween",
-                  0,
-                  1
-                )}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.25 }}
-              >
-                <div className="flex flex-col items-center h-full p-6 overflow-hidden border-2 border-blue-500 rounded-lg">
-                  <h2 className="mx-auto mb-4 text-sm font-medium tracking-[3px] text-blue-300 uppercase title-font">
-                    {title}
+    <section id="fees">
+      <div className="py-24 overflow-hidden bg-blue-950">
+        <div className="container mx-auto">
+          <div className="w-1 h-8 rounded-full mb-6 bg-gray-100/50 mx-auto" />
+          <h2 className="uppercase tracking-widest text-gray-100 text-base font-bold text-center">
+            Tariffe
+          </h2>
+
+          <div className="mx-auto mt-12">
+            <div className="flex flex-wrap justify-center">
+              <div className="w-full lg:w-4/12 p-4 min-h-96">
+                <div className="flex flex-col items-center justify-center h-full p-6 overflow-hidden bg-blue-800 drop-shadow-xl rounded-3xl">
+                  <h2 className="text-lg font-semibold text-blue-200 text-center">
+                    Prima Visita Osteopatica
                   </h2>
-                  <h1 className="flex items-center mx-auto mb-4 text-5xl leading-none text-center text-white">
-                    <span>&euro;{fee}</span>
-                    <span className="ml-1 text-lg font-normal text-gray-300"></span>
+                  <h1 className="mx-auto mt-8 mb-4 text-5xl text-center text-gray-100 tracking-wide font-medium">
+                    <span>&euro;</span>
+                    <span className="ml-1">70</span>
                   </h1>
-                  <Divider />
-                  <div className="mt-4">
-                    {services.map((service, index) => (
-                      <p
-                        key={index}
-                        className="flex items-center mb-2 text-gray-300"
-                      >
-                        <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-gray-200 bg-blue-500 rounded-full">
-                          <svg
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2.5"
-                            className="w-3 h-3"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M20 6L9 17l-5-5"></path>
-                          </svg>
-                        </span>
-                        {service}
-                      </p>
-                    ))}
+                  <hr className="flex w-20 border border-blue-400 rounded-full" />
+                  <div className="mt-8 flex flex-col gap-2 text-center">
+                    <h6 className="text-blue-200/80 font-light tracking-wide">
+                      Anamnesi
+                    </h6>
+                    <h6 className="text-blue-200/80 font-light tracking-wide">
+                      Valutazione
+                    </h6>
+                    <h6 className="text-blue-200/80 font-light tracking-wide">
+                      Trattamento
+                    </h6>
                   </div>
                 </div>
-              </MotionDiv>
-            ))}
+              </div>
+              <div className="w-full lg:w-4/12 p-4 min-h-96">
+                <div className="flex flex-col items-center justify-center h-full p-6 overflow-hidden bg-blue-800 drop-shadow-xl rounded-3xl">
+                  <h2 className="text-lg font-semibold text-blue-200 text-center">
+                    Visita Osteopatica
+                  </h2>
+                  <h1 className="mx-auto mt-8 mb-4 text-5xl text-center text-gray-100 tracking-wide font-medium">
+                    <span>&euro;</span>
+                    <span className="ml-1">60</span>
+                  </h1>
+                  <hr className="flex w-20 border border-blue-400 rounded-full" />
+                  <div className="mt-8 flex flex-col gap-2 text-center">
+                    <h6 className="text-blue-200/80 font-light tracking-wide">
+                      Trattamento
+                    </h6>
+                    <h6 className="text-blue-200/80 font-light tracking-wide invisible">
+                      Trattamento
+                    </h6>
+                    <h6 className="text-blue-200/80 font-light tracking-wide invisible">
+                      Trattamento
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex mx-auto justify-center mt-12">
+              <CTAButton title="Prenota Una Visita" />
+            </div>
           </div>
-          <MotionDiv
-            className="flex"
-            variants={fadeIn("up", "tween", 0, 1)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
-          >
-            <a
-              className="flex items-center px-4 py-2 mt-auto text-white transition-all duration-500 bg-blue-500 border-0 rounded-full book-appointment focus:outline-none hover:bg-green-500 hover:scale-110 gap-x-2"
-              href="tel:+393345832026"
-            >
-              <span>Prenota Visita</span>
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-4 h-4 ml-auto"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </MotionDiv>
         </div>
       </div>
     </section>

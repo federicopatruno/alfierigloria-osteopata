@@ -1,108 +1,64 @@
 import Image from "next/image";
-import { fadeIn } from "@/utils/motion";
-import { MotionDiv } from "../shared/MotionDiv";
 import CTAButton from "../shared/ui/CTAButton";
+import SocialIcons from "../shared/SocialIcons";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-gray-900">
-      <div className="flex flex-col items-center justify-center mx-auto sm:container max-sm:w-11/12">
-        <MotionDiv
-          className="relative w-4/6 mx-auto mb-10 overflow-hidden bg-blue-500 rounded-full aspect-square lg:w-1/4 md:w-3/6"
-          variants={fadeIn("", "tween", 0, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
-        >
+    <section id="about">
+      <div className="flex max-lg:flex-col">
+        <div className="relative lg:w-1/2 lg:min-h-lvh min-h-[75vh] bg-black">
           <Image
-            className="object-cover object-center"
+            className="object-cover object-top"
             alt="Dr.ssa Alfieri Gloria Osteopata"
-            src="/images/alfieri-gloria-osteopata.jpeg"
+            src="/images/alfieri-gloria-osteopata.jpg"
             fill
-            placeholder="empty"
-            sizes="(max-width: 768px) 50vw, 33vw"
-            loading="lazy"
+            sizes="100vw"
           />
-        </MotionDiv>
-
-        <MotionDiv
-          className="flex flex-col w-full mb-8 text-center lg:w-2/3 gap-y-2"
-          variants={fadeIn("up", "tween", 0.25, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
-        >
-          <h2 className="overhead">
-            Osteopata iscritta al ROI con sede ad Ancona nelle Marche
+        </div>
+        <div className="bg-blue-950 flex flex-col lg:w-1/2 lg:py-24 lg:px-16 py-12 px-8 lg:justify-center lg:flex lg:flex-col">
+          <h2 className="text-blue-400 font-light text-lg lg:text-xl tracking-wider text-center lg:text-start mb-2">
+            Osteopata
           </h2>
-          <h1 className="title">Dr.ssa Alfieri Gloria Osteopata</h1>
-          <h3 className="subtitle">
-            Collaboro con Ortopedici, Fisioterapisti e Psicoterapeuti
-          </h3>
-        </MotionDiv>
+          <h1 className="text-4xl lg:text-6xl text-gray-200 text-center lg:text-start font-bold">
+            Dr.ssa Gloria Alfieri
+          </h1>
 
-        <MotionDiv
-          className="max-w-4xl prose-lg text-justify text-gray-400"
-          variants={fadeIn("right", "tween", 0.5, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
-        >
-          <p>
-            Ho intrapreso il mio percorso di studio dell&apos;osteopatia nel
-            2011, presso il poliambulatorio Take Care di Milano.
-          </p>
+          <div className="mt-8 prose max-w-none font-light tracking-wide text-center lg:text-start text-pretty text-blue-200/80">
+            <p>
+              Ho intrapreso il mio percorso di studio dell&apos;osteopatia nel
+              2011, presso il poliambulatorio Take Care di Milano.
+            </p>
 
-          <p>
-            Nel 2016 ho ottenuto il diploma in osteopatia in seguito al
-            superamento dell&apos;esame d&apos;ammissione al R.O.I. (Registro
-            degli osteopati d&apos;Italia).
-          </p>
+            <p>
+              Durante i cinque anni di corso, ho potuto specializzarmi nella
+              medicina osteopatica, in qualità di tirocinante, dapprima
+              osservatore ed in seguito operativo in vari ambulatori osteopatici
+              privati a Milano.
+            </p>
 
-          <p>
-            Durante i cinque anni di corso, ho potuto specializzarmi nella
-            medicina osteopatica, in qualità di tirocinante, dapprima
-            osservatore ed in seguito operativo in vari ambulatori osteopatici
-            privati a Milano.
-          </p>
+            <p>
+              Nel 2016 ho ottenuto il diploma in osteopatia in seguito al
+              superamento dell&apos;esame d&apos;ammissione al R.O.I. (Registro
+              degli osteopati d&apos;Italia).
+            </p>
 
-          <p>
-            Successivamente ho preso parte ad un studio approfondito, in qualità
-            di tirocinante pratico, sulle cure osteopatiche palliative ed il
-            rapporto fra operatore e paziente all&apos;interno dell&apos;Hospice
-            di Borgonovo val Tidone (PC), trattando pazienti affetti da malattie
-            terminali.
-          </p>
-
-          <p>
-            Ho affinato le mie competenze anatomiche e mediche, effettuando
-            tirocinio osservativo all&apos;Ospedale Civile di Piacenza nei
-            reparti di chirurgia generale ed ortopedica, cardiologia, radiologia
-            ed in pronto soccorso ortopedico pediatrico.
-          </p>
-
-          <p>
-            Per anni ho eseguito la mia professione a Cinisello Balsamo in uno
-            studio privato in condivisione con una psicoterapeuta, al C.T.I.
-            (Centro Terapie Integrate) in team con diversi specialisti tra cui
-            ortopedici, fisioterapisti e psicoterapeuti e collaborando con
-            odontoiatri presso lo studio medico dentistico Bartolacci a Milano.
-          </p>
-
-          <p>
-            Attualmente svolgo il mio lavoro in uno studio medico ad Ancona,
-            nelle Marche.
-          </p>
-        </MotionDiv>
-        <MotionDiv
-          className="flex justify-center mt-10"
-          variants={fadeIn("up", "tween", 0, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
-        >
-          <CTAButton />
-        </MotionDiv>
+            <p>
+              Attualmente svolgo il mio lavoro in uno studio medico ad Ancona
+              nelle Marche, collaborando con fisioterapisti, ortopedici e
+              psicoterapeuti.
+            </p>
+          </div>
+          <div className="mt-8 max-lg:mx-auto lg:ml-4">
+            <SocialIcons
+              variant="large"
+              facebook="alfierigloria.osteopata"
+              instagram="alfierigloria.osteopata"
+            />
+          </div>
+          <div className="flex mt-10 max-lg:mx-auto">
+            <CTAButton />
+          </div>
+        </div>
       </div>
     </section>
   );
