@@ -16,7 +16,7 @@ const About = () => {
             sizes="(max-width: 768px) 100vw, (max-width: 1600px) 50vw, 33vw"
           />
         </div>
-        <div className="bg-blue-950 flex flex-col lg:w-1/2 lg:py-24 lg:px-16 py-12 px-8 lg:justify-center lg:flex lg:flex-col">
+        <div className="bg-blue-950 flex flex-col lg:w-1/2 lg:pt-48 pb-24 lg:px-16 py-12 px-8 lg:justify-center lg:flex lg:flex-col">
           <h2 className="text-blue-400 font-light text-lg lg:text-xl tracking-wider text-center lg:text-start mb-2">
             Osteopata
           </h2>

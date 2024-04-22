@@ -7,6 +7,12 @@ import Fees from "@/components/sections/Fees";
 import Osteopathy from "@/components/sections/Osteopathy";
 import Treatment from "@/components/sections/Treatment";
 
+export const metadata = {
+  description:
+    "Osteopata iscritta al ROI con sede ad Ancona nelle Marche. Collaboro con ortopedici, fisioterapisti e psicoterapeuti.",
+  keywords: ["Alfieri Gloria", "Osteopata", "Marche"],
+};
+
 export default function Home() {
   return (
     <main>
