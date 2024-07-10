@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section id="about">
       <div className="flex max-lg:flex-col">
-        <div className="relative lg:w-1/2 lg:min-h-lvh min-h-[75vh] bg-black">
+        <div className="relative lg:w-1/2 lg:min-h-lvh min-h-[75vh] bg-neutral-950">
           <Image
             className="object-cover object-top"
             alt="Dr.ssa Alfieri Gloria Osteopata"
