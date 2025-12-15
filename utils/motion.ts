@@ -1,3 +1,4 @@
+import { EasingDefinition, AnimationGeneratorType } from "motion/react";
 export const fadeInStaggered = (
   direction: "" | "down" | "left" | "up" | "right",
   type: "tween" | "linear",
@@ -13,9 +14,9 @@ export const fadeInStaggered = (
     y: 0,
     opacity: 1,
     transition: {
-      type,
+      type: type as AnimationGeneratorType,
       duration,
-      ease: "easeOut",
+      ease: "easeOut" as EasingDefinition,
     },
   },
 });
@@ -73,10 +74,10 @@ export const fadeIn = (
     y: 0,
     opacity: 1,
     transition: {
-      type,
+      type: type as AnimationGeneratorType,
       delay,
       duration,
-      ease: "easeOut",
+      ease: "easeOut" as EasingDefinition,
     },
   },
 });
@@ -95,10 +96,10 @@ export const slideIn = (
     x: 0,
     y: 0,
     transition: {
-      type,
+      type: type as AnimationGeneratorType,
       delay,
       duration,
-      ease: "easeOut",
+      ease: "easeOut" as EasingDefinition,
     },
   },
 });
@@ -129,10 +130,10 @@ export const zoomOut = (delay: number, duration: number) => ({
     scale: 1,
     opacity: 1,
     transition: {
-      type: "tween",
+      type: "tween" as AnimationGeneratorType,
       delay,
       duration,
-      ease: "easeOut",
+      ease: "easeOut" as EasingDefinition,
     },
   },
 });

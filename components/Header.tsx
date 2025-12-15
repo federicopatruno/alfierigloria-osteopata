@@ -5,7 +5,7 @@ import CTAButton from "./shared/ui/CTAButton";
 import MobileMenu from "./shared/navigation/MobileMenu";
 import { cn } from "@/lib/utils";
 import { useRef, useState } from "react";
-import { useInView, useMotionValueEvent, useScroll } from "framer-motion";
+import { useInView, useMotionValueEvent, useScroll } from "motion/react";
 import { usePathname } from "next/navigation";
 import ScrollLink from "./shared/ui/ScrollLInk";
 

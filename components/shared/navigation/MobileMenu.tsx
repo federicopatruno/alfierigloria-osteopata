@@ -34,7 +34,7 @@ const MobileMenu = ({ isHiddenInView }: { isHiddenInView: boolean }) => {
     <>
       {/* Hamburger Button */}
       <button
-        className="z-[999] cursor-pointer flex lg:hidden items-center justify-center flex-col self-center gap-[6px] group"
+        className="z-999 cursor-pointer flex lg:hidden items-center justify-center flex-col self-center gap-1.5 group"
         onClick={toggleOpen}
       >
         <span
