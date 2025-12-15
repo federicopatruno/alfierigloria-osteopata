@@ -33,7 +33,7 @@ const Header = () => {
               ? "will-change-transform animate-in fill-mode-both fade-in-0 slide-in-from-top-24 opacity-100"
               : "",
             !isHiddenInView &&
-              (isVisible ? "top-0 bg-blue-900" : "-top-24 bg-blue-900/0")
+            (isVisible ? "top-0 bg-blue-900" : "-top-24 bg-blue-900/0")
           )}
         >
           <div className="flex items-center justify-between mx-auto sm:container max-sm:w-11/12 py-4">

@@ -6,9 +6,9 @@ const About = () => {
   return (
     <section id="about">
       <div className="flex max-lg:flex-col">
-        <div className="relative lg:w-1/2 lg:min-h-lvh min-h-[75vh] bg-neutral-950">
+        <div className="relative lg:w-1/2 lg:min-h-lvh min-h-[75vh] bg-blue-950">
           <Image
-            className="object-cover object-top"
+            className="object-cover object-top animate-in duration-1000 fade-in-0"
             alt="Dr.ssa Alfieri Gloria Osteopata"
             src="/images/alfieri-gloria-osteopata.jpg"
             fill

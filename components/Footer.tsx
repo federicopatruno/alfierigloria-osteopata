@@ -6,7 +6,7 @@ import FooterNavigation from "./shared/navigation/FooterNavigation";
 const Footer = () => {
   return (
     <footer className="overflow-hidden text-gray-400 bg-gray-900 body-font">
-      <div className="container flex flex-col sm:flex-col-reverse flex-wrap py-12 lg:py-24 mx-auto md:items-center lg:items-start lg:flex-row md:flex-nowrap">
+      <div className="container flex flex-col flex-wrap py-12 lg:py-24 mx-auto md:items-center lg:items-start lg:flex-row md:flex-nowrap">
         <div className="flex justify-center lg:w-1/3">
           <Link
             href="/"
@@ -26,7 +26,7 @@ const Footer = () => {
           </Link>
           {/* <p className="mt-2 text-sm text-center text-gray-500 lg:text-start">Air plant banjo lyft occupy retro adaptogen indego</p> */}
         </div>
-        <div className="flex flex-wrap w-full mt-8 sm:mt-0 md:mt-8 lg:mt-0 text-center lg:pl-20 sm:text-left">
+        <div className="flex flex-wrap w-full mt-8 lg:mt-0 text-center lg:pl-20 lg:text-left">
           <div className="w-full px-4 lg:w-1/3 md:w-1/3">
             <h2 className="mb-3 font-semibold text-gray-100 text-lg tracking-wide">
               Contatti
@@ -78,7 +78,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="w-full px-4 lg:w-1/3 md:w-1/3 max-sm:mt-8">
+          <div className="mt-8 lg:mt-0 w-full px-4 lg:w-1/3 md:w-1/3 max-sm:mt-8">
             <h2 className="mb-3 font-semibold text-gray-100 text-lg tracking-wide">
               Menu
             </h2>

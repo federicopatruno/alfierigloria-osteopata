@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@import "vanilla-cookieconsent/dist/cookieconsent.css";
 @plugin "@tailwindcss/typography";
+@import "tw-animate-css";
 
 @layer base {
   :root {
@@ -67,8 +67,6 @@
 }
 
 @theme {
-  --breakpoint-2xl: 1440px;
-
   --font-sans: var(--font-poppins);
 
   /* shadcn */
@@ -123,6 +121,7 @@
 @utility container {
   padding-inline: 2rem;
   margin-inline: auto;
+  max-width: var(--breakpoint-2xl);
 }
 
 @layer base {
