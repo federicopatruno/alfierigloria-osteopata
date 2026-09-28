@@ -6,6 +6,7 @@ import ConsentManager from "@/components/shared/cmp/ConsentManager";
 import { cn } from "@/lib/utils";
 import { poppins } from "./fonts";
 import { Metadata } from "next";
+import { ReactLenis } from "lenis/react";
 
 export const metadata: Metadata = {
   title: {
@@ -41,13 +42,17 @@ interface LayoutProps {
 
 export default function RootLayout({ children }: LayoutProps) {
   return (
+
     <html lang="it" className={cn(poppins.variable)}>
       <body>
-        {process.env.GTM_ID && <GoogleTagManager gtmId={process.env.GTM_ID} />}
-        <Header />
-        {children}
-        <Footer />
-        <ConsentManager />
+        <ReactLenis root>
+
+          {process.env.GTM_ID && <GoogleTagManager gtmId={process.env.GTM_ID} />}
+          <Header />
+          {children}
+          <Footer />
+          <ConsentManager />
+        </ReactLenis>
       </body>
     </html>
   );
